@@ -13,8 +13,3 @@
     grid-template-columns: repeat(64, 1fr);
     grid-template-rows: repeat(64, 1fr);
 }
-
-.gridCell {
-    background-color: red;
-    border: 1px solid black;
-}
