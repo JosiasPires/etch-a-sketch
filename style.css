@@ -4,12 +4,17 @@
     margin: 0;
 }
 
+#sizeButton {
+    outline: none;
+    border: 1px solid black;
+    padding: 1rem;
+    cursor: pointer;
+}
+
 .grid {
     width: 50rem;
     height: 50rem;
     box-sizing: content-box;
     border: 2px solid black;
     display: grid;
-    grid-template-columns: repeat(64, 1fr);
-    grid-template-rows: repeat(64, 1fr);
 }
