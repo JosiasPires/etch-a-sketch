@@ -12,7 +12,13 @@ function createGrid(size) {
     const cells = Array.from(document.querySelectorAll('.gridCell'));
     cells.forEach(cell => {
         cell.addEventListener('mouseover', () => {
-            cell.style.backgroundColor = 'black';
+            let brightness = Number(getComputedStyle(cell).filter.replace(/[^0-9.]/g, '')) - 0.1;
+            if (getComputedStyle(cell).backgroundColor !== 'rgb(255, 255, 255)') {
+                cell.style.filter = `brightness(${brightness})`;
+            }
+            else {
+                cell.style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 257) + ',' + Math.floor(Math.random() * 257) + ',' + Math.floor(Math.random() * 257) + ')';
+            }
         })
     })
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
